@@ -90,6 +90,9 @@
                                         <color key="backgroundColor" red="0.34565127409359764" green="0.97550835355487953" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="A_answer:" destination="bAk-kB-u2h" eventType="touchUpInside" id="hve-gB-7Gd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lp-vM-cT4">
                                 <rect key="frame" x="96.666666666666686" y="500.66666666666674" width="200" height="80"/>
@@ -103,6 +106,9 @@
                                         <color key="backgroundColor" red="0.34565127409359764" green="0.97550835355487953" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="B_answer:" destination="bAk-kB-u2h" eventType="touchUpInside" id="mVa-nK-Jyx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O77-oo-is0">
                                 <rect key="frame" x="96.666666666666686" y="650.66666666666663" width="200" height="80"/>
@@ -116,6 +122,9 @@
                                         <color key="backgroundColor" red="0.34565127409359764" green="0.97550835355487953" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="C_answer:" destination="bAk-kB-u2h" eventType="touchUpInside" id="Zm5-VC-XSv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="v2z-WX-7ov"/>
@@ -132,6 +141,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1tR-b2-w9w"/>
+                    <connections>
+                        <outlet property="firstQuestion" destination="i5s-XK-rAv" id="Fse-PH-mxo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Saz-mI-Rcb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,6 +9,16 @@ import UIKit
 
 class SleepViewController: UIViewController {
 
+    @IBOutlet weak var firstQuestion: UILabel!
+    @IBAction func A_answer(_ sender: Any) {
+        print("Click A")
+    }
+    @IBAction func B_answer(_ sender: Any) {
+        print("Click B")
+    }
+    @IBAction func C_answer(_ sender: Any) {
+        print("Click C")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
