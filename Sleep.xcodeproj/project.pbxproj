@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		EEB6623C2CCEB63B00F0DF6F /* SleepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB6623B2CCEB63B00F0DF6F /* SleepViewController.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		EEC5D4612CCD7BFA001E46A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -28,7 +24,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EEB6623B2CCEB63B00F0DF6F /* SleepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepViewController.swift; sourceTree = "<group>"; };
 		EEC5D44A2CCD7BF9001E46A4 /* Sleep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sleep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC5D4602CCD7BFA001E46A4 /* SleepTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SleepTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC5D46A2CCD7BFA001E46A4 /* SleepUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SleepUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,7 +88,6 @@
 		EEC5D4412CCD7BF9001E46A4 = {
 			isa = PBXGroup;
 			children = (
-				EEB6623B2CCEB63B00F0DF6F /* SleepViewController.swift */,
 				EEC5D44C2CCD7BF9001E46A4 /* Sleep */,
 				EEC5D4632CCD7BFA001E46A4 /* SleepTests */,
 				EEC5D46D2CCD7BFA001E46A4 /* SleepUITests */,
@@ -255,7 +249,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEB6623C2CCEB63B00F0DF6F /* SleepViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hqD-j6-1f0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hqD-j6-1f0">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -91,10 +91,10 @@
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="A_answer:" destination="bAk-kB-u2h" eventType="touchUpInside" id="hve-gB-7Gd"/>
+                                    <action selector="answerBut:" destination="bAk-kB-u2h" eventType="touchUpInside" id="I38-yC-Hpq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lp-vM-cT4">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lp-vM-cT4">
                                 <rect key="frame" x="96.666666666666686" y="500.66666666666674" width="200" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Ggy-gY-05J"/>
@@ -107,10 +107,10 @@
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="B_answer:" destination="bAk-kB-u2h" eventType="touchUpInside" id="mVa-nK-Jyx"/>
+                                    <action selector="answerBut:" destination="bAk-kB-u2h" eventType="touchUpInside" id="kfF-nG-bgX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O77-oo-is0">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O77-oo-is0">
                                 <rect key="frame" x="96.666666666666686" y="650.66666666666663" width="200" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="h5P-c3-sv7"/>
@@ -123,7 +123,7 @@
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="C_answer:" destination="bAk-kB-u2h" eventType="touchUpInside" id="Zm5-VC-XSv"/>
+                                    <action selector="answerBut:" destination="bAk-kB-u2h" eventType="touchUpInside" id="EmJ-fn-gDo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -142,7 +142,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="1tR-b2-w9w"/>
                     <connections>
-                        <outlet property="firstQuestion" destination="i5s-XK-rAv" id="Fse-PH-mxo"/>
+                        <outlet property="tittleQuestion" destination="i5s-XK-rAv" id="lPa-1p-dmK"/>
+                        <outletCollection property="butAnswer" destination="YX3-hG-xRu" collectionClass="NSMutableArray" id="DLD-M5-Y6Z"/>
+                        <outletCollection property="butAnswer" destination="9lp-vM-cT4" collectionClass="NSMutableArray" id="4hK-qO-poB"/>
+                        <outletCollection property="butAnswer" destination="O77-oo-is0" collectionClass="NSMutableArray" id="12e-5A-4uG"/>
+                        <segue destination="Eff-Tx-uQv" kind="show" identifier="screenPointsTransition" id="QT5-Hr-XPV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Saz-mI-Rcb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -167,14 +171,60 @@
             </objects>
             <point key="canvasLocation" x="139.69465648854961" y="-2.1126760563380285"/>
         </scene>
+        <!--Answer View Controller-->
+        <scene sceneID="9x4-fv-5Xr">
+            <objects>
+                <viewController id="Eff-Tx-uQv" customClass="AnswerViewController" customModule="Sleep" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WYb-GK-mRB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test finished" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0n-tF-1CJ">
+                                <rect key="frame" x="86.666666666666686" y="150" width="220" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Points: -300" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4W-TU-yzb">
+                                <rect key="frame" x="86" y="284" width="235" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RuM-Zz-byH"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="l0n-tF-1CJ" firstAttribute="leading" secondItem="RuM-Zz-byH" secondAttribute="leading" constant="86.670000000000002" id="4fJ-6o-bql"/>
+                            <constraint firstItem="l0n-tF-1CJ" firstAttribute="centerX" secondItem="WYb-GK-mRB" secondAttribute="centerX" id="PPT-iW-phK"/>
+                            <constraint firstItem="RuM-Zz-byH" firstAttribute="trailing" secondItem="l0n-tF-1CJ" secondAttribute="trailing" constant="86.329999999999998" id="XZr-IF-vYi"/>
+                            <constraint firstItem="o4W-TU-yzb" firstAttribute="top" secondItem="l0n-tF-1CJ" secondAttribute="bottom" constant="85" id="iXb-l0-zRg"/>
+                            <constraint firstItem="l0n-tF-1CJ" firstAttribute="top" secondItem="WYb-GK-mRB" secondAttribute="top" constant="150" id="rKV-ej-NPO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wKC-F3-sa1"/>
+                    <connections>
+                        <outlet property="pointstext" destination="o4W-TU-yzb" id="jxM-33-nc9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ikd-Wm-dw1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1342.7480916030534" y="-679.57746478873241"/>
+        </scene>
     </scenes>
     <resources>
         <image name="pngwing.com" width="896" height="574"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
